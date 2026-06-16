@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'KI-gestützte Automatisierung für Ihren Unternehmenserfolg',
   domain: 'zindaco.com',
   redirectDomains: ['zindaco.de', 'zindaco.info'],
-  email: 'info@zindaco.com',
+  email: 'zindaco.meyssamy@gmail.com',
   phone: '+49 173 2147678',
   address: {
     street: 'Fröbelstraße 2a',

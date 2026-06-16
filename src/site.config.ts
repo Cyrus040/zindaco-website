@@ -5,7 +5,7 @@ export const SITE = {
   domain: 'zindaco.com',
   redirectDomains: ['zindaco.de', 'zindaco.info'],
   email: 'info@zindaco.com',
-  phone: '+49 40 123456789',
+  phone: '+49 173 2147678',
   address: {
     street: 'Fröbelstraße 2a',
     city: '20146 Hamburg',

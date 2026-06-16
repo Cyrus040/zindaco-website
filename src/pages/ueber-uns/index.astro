@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE } from '../../site.config.ts';
+---
+
+<Layout title="Über uns" description={`Über die ZindaCO GmbH — KI-Automatisierung aus Hamburg`}>
+  <section class="section" style="padding-top: 4rem;">
+    <div class="container">
+      <h1 class="text-center mb-4">Über uns</h1>
+      
+      <!-- Company Story -->
+      <div style="max-width: 800px; margin: 0 auto 4rem;">
+        <p style="color: #bbb; font-size: 1.15rem; line-height: 1.8;">
+          <!-- TODO: Cyrus prüfen — Unternehmensgeschichte anpassen -->
+          Die ZindaCO GmbH wurde mit einer klaren Mission gegründet: KI-gestützte Automatisierung 
+          für Unternehmen praktisch, bezahlbar und sofort nutzbar zu machen. Keine Luftschlösser, 
+          keine überteuerten Beratungsprojekte — echte Lösungen die funktionieren.
+        </p>
+        <p style="color: #999; margin-top: 1.5rem;">
+          Unser Ansatz ist pragmatisch: Wir analysieren Ihre Prozesse, identifizieren die grössten 
+          Zeitfresser und bauen massgeschneiderte Automatisierungen die sich in Wochen statt Jahren 
+          amortisieren. Ob Buchhaltung, CRM, Reporting oder individuelle Workflows — wenn es manuell 
+          und wiederkehrend ist, automatisieren wir es.
+        </p>
+      </div>
+
+      <!-- Team -->
+      <h2 class="text-center mb-8">Unser Team</h2>
+      <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
+        <!-- Cyrus -->
+        <div class="card" style="text-align: center;">
+          <!-- TODO: Cyrus prüfen — Foto einfügen wenn gewünscht -->
+          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--brand); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #fff;">C</div>
+          <h3>Cyrus Meyssamy</h3>
+          <p style="color: var(--brand); font-size: 0.9rem; font-weight: 500;">Geschäftsführer</p>
+          <p style="color: #999; font-size: 0.9rem; margin-top: 0.75rem;">
+            <!-- TODO: Cyrus prüfen -->
+            KI-Experte mit 20+ Jahren IT-Erfahrung. Pragmatisch, lösungsorientiert, 
+            kein BWL-Geschwurbel.
+          </p>
+        </div>
+
+        <!-- Oliver -->
+        <div class="card" style="text-align: center;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-hover); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--brand);">O</div>
+          <h3>Oliver Pause</h3>
+          <p style="color: var(--brand); font-size: 0.9rem; font-weight: 500;">Geschäftsführer</p>
+          <p style="color: #999; font-size: 0.9rem; margin-top: 0.75rem;">
+            <!-- TODO: Cyrus prüfen — Oliver's Bio ergänzen -->
+            Geschäftsführer der ZindaCO GmbH.
+          </p>
+        </div>
+
+        <!-- Darko -->
+        <div class="card" style="text-align: center;">
+          <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--bg-hover); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--brand);">D</div>
+          <h3>Sind Darko</h3>
+          <p style="color: var(--brand); font-size: 0.9rem; font-weight: 500;">Gesellschafter</p>
+          <p style="color: #999; font-size: 0.9rem; margin-top: 0.75rem;">
+            <!-- TODO: Cyrus prüfen — Sind Darko's Bio ergänzen -->
+            Gesellschafter der ZindaCO GmbH (50%).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

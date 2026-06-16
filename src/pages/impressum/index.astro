@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE } from '../../site.config.ts';
+---
+
+<Layout title="Impressum" description="Impressum der ZindaCO GmbH">
+  <section class="section" style="padding-top: 4rem;">
+    <div class="container" style="max-width: 700px; margin: 0 auto;">
+      <h1 class="mb-8">Impressum</h1>
+
+      <div style="color: #bbb; line-height: 1.8;">
+        <p><strong>{SITE.name}</strong></p>
+        <p>
+          {SITE.address.street}<br />
+          {SITE.address.city}
+        </p>
+
+        <p style="margin-top: 2rem;">
+          <strong>Vertreten durch:</strong><br />
+          {SITE.ceo}
+        </p>
+
+        <p style="margin-top: 2rem;">
+          <strong>Kontakt:</strong><br />
+          E-Mail: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
+          Telefon: {SITE.phone}
+        </p>
+
+        <p style="margin-top: 2rem;">
+          <strong>Handelsregister:</strong><br />
+          {SITE.registry.court}<br />
+          {SITE.registry.number}
+        </p>
+
+        <p style="margin-top: 2rem;">
+          <strong>Umsatzsteuer-ID:</strong><br />
+          <!-- TODO: Cyrus prüfen — USt-IdNr. eintragen -->
+          Wird nachgereicht
+        </p>
+
+        <p style="margin-top: 2rem;">
+          <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br />
+          {SITE.ceo}<br />
+          {SITE.address.street}<br />
+          {SITE.address.city}
+        </p>
+
+        <p style="margin-top: 2rem; font-size: 0.85rem; color: #666;">
+          <strong>Haftungsausschluss:</strong><br />
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte 
+          externer Links. Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber 
+          verantwortlich.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

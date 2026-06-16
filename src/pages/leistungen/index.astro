@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE } from '../../site.config.ts';
+---
+
+<Layout title="Leistungen" description={`Unsere Leistungen im Bereich KI-Automatisierung für Unternehmen — ${SITE.name}`}>
+  <section class="section" style="padding-top: 4rem;">
+    <div class="container">
+      <h1 class="text-center mb-4">Unsere Leistungen</h1>
+      <p class="text-center" style="color: #bbb; max-width: 650px; margin: 0 auto 3rem;">
+        <!-- TODO: Cyrus prüfen — Leistungen verfeinern -->
+        Wir bieten ein breites Spektrum an KI-Automatisierungslösungen — von der Analyse 
+        bis zum produktiven Betrieb. Immer pragmatisch, immer DSGVO-konform.
+      </p>
+
+      <div class="grid" style="gap: 3rem;">
+        <!-- Leistung 1 -->
+        <div class="card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+          <div>
+            <div style="font-size: 3rem; color: var(--brand); margin-bottom: 1rem;">🤖</div>
+            <h3>KI-Automatisierung</h3>
+          </div>
+          <div>
+            <p style="color: #bbb;">
+              Analyse Ihrer bestehenden Geschäftsprozesse auf Automatisierungspotential. 
+              Wir identifizieren wiederkehrende, manuelle Aufgaben und ersetzen sie durch 
+              intelligente KI-Agenten — ohne Ihre bestehende IT zu ersetzen.
+            </p>
+            <ul style="color: #999; margin-top: 1rem; padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">Prozessanalyse & Automatisierungs-Check</li>
+              <li style="margin-bottom: 0.5rem;">Massgeschneiderte KI-Agenten für repetitive Aufgaben</li>
+              <li style="margin-bottom: 0.5rem;">Integration in bestehende Systeme (CRM, ERP, Buchhaltung)</li>
+              <li style="margin-bottom: 0.5rem;">Autonome Cron-Jobs für regelmässige Abläufe</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Leistung 2 -->
+        <div class="card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+          <div>
+            <div style="font-size: 3rem; color: var(--brand); margin-bottom: 1rem;">📊</div>
+            <h3>Paperclip-Plattform</h3>
+          </div>
+          <div>
+            <p style="color: #bbb;">
+              Unsere hauseigene Paperclip-Plattform ermöglicht Multi-Agent-Systeme mit 
+              zentralem Dashboard, Cron-Job-Steuerung und Echtzeit-Überwachung. Ideal für 
+              Unternehmen mit mehreren automatisierten Arbeitsabläufen.
+            </p>
+            <ul style="color: #999; margin-top: 1rem; padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">Multi-Agent-Architektur mit bis zu 16 parallel laufenden Jobs</li>
+              <li style="margin-bottom: 0.5rem;">Zentrales Dashboard für alle Automatisierungen</li>
+              <li style="margin-bottom: 0.5rem;">Individuelle Agenten für Buchhaltung, CRM, Reporting</li>
+              <li style="margin-bottom: 0.5rem;">VPS-basiertes Hosting (Hostinger, Cloudflare-Integration)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Leistung 3 -->
+        <div class="card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+          <div>
+            <div style="font-size: 3rem; color: var(--brand); margin-bottom: 1rem;">💡</div>
+            <h3>Beratung & Strategie</h3>
+          </div>
+          <div>
+            <p style="color: #bbb;">
+              Sie wissen noch nicht genau wo KI bei Ihnen greifen kann? Wir kommen vorbei, 
+              analysieren Ihre Abläufe und erstellen einen konkreten Umsetzungsplan.
+            </p>
+            <ul style="color: #999; margin-top: 1rem; padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">KI-Readiness-Check für Ihr Unternehmen</li>
+              <li style="margin-bottom: 0.5rem;">Technologieauswahl und Architekturberatung</li>
+              <li style="margin-bottom: 0.5rem;">Datenschutzkonforme Implementierungsstrategien</li>
+              <li style="margin-bottom: 0.5rem;">ROI-Analyse vor Projektbeginn</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Leistung 4 -->
+        <div class="card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+          <div>
+            <div style="font-size: 3rem; color: var(--brand); margin-bottom: 1rem;">🖥️</div>
+            <h3>Hosting & Betrieb</h3>
+          </div>
+          <div>
+            <p style="color: #bbb;">
+              Wir hosten und betreiben Ihre KI-Lösungen auf deutscher Infrastruktur. 
+              VPS-basiert, Cloudflare-gesichert, DSGVO-konform. Inklusive Monitoring, 
+              Backup und kontinuierlicher Optimierung.
+            </p>
+            <ul style="color: #999; margin-top: 1rem; padding-left: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;">VPS-basiertes Deployment (Hostinger oder nach Wahl)</li>
+              <li style="margin-bottom: 0.5rem;">Cloudflare-Integration für Performance & Sicherheit</li>
+              <li style="margin-bottom: 0.5rem;">24/7 Monitoring und automatische Failover</li>
+              <li style="margin-bottom: 0.5rem;">Regelmässige Updates und Wartung</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--bg-card); border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.05);">
+        <h3>Nicht sicher welche Leistung zu Ihnen passt?</h3>
+        <p style="color: #bbb; margin-top: 0.5rem;">Vereinbaren Sie ein kostenloses Erstgespräch — wir finden es gemeinsam heraus.</p>
+        <a href="/kontakt" class="btn" style="margin-top: 1.5rem;">Gespräch vereinbaren</a>
+      </div>
+    </div>
+  </section>
+</Layout>

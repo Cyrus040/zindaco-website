@@ -1,0 +1,16 @@
+name = "zindaco-website"
+compatibility_date = "2024-12-01"
+
+[pages]
+build_command = "npm run build"
+build_output_dir = "dist"
+
+[[redirects]]
+from = "https://zindaco.de/*"
+to = "https://zindaco.com/:splat"
+status = 301
+
+[[redirects]]
+from = "https://zindaco.info/*"
+to = "https://zindaco.com/:splat"
+status = 301

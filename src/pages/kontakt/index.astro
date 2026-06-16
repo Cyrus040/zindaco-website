@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { SITE } from '../../site.config.ts';
+---
+
+<Layout title="Kontakt" description={`Kontaktieren Sie die ${SITE.name} — wir freuen uns auf Ihre Nachricht`}>
+  <section class="section" style="padding-top: 4rem;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h1 class="text-center mb-4">Kontakt</h1>
+      <p class="text-center" style="color: #bbb; max-width: 600px; margin: 0 auto 3rem;">
+        Sie haben ein konkretes Projekt im Kopf oder wollen einfach mal unverbindlich 
+        über Möglichkeiten sprechen? Wir sind für Sie da.
+        <!-- TODO: Cyrus prüfen — Formular-Integration (Formspree/hCaptcha etc.) -->
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+        <!-- Contact Form -->
+        <div>
+          <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <label for="name" style="display: block; margin-bottom: 0.375rem; color: #ccc; font-size: 0.9rem; font-weight: 500;">Name *</label>
+              <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.375rem; color: var(--text); font-family: inherit; font-size: 1rem;" />
+            </div>
+            <div>
+              <label for="email" style="display: block; margin-bottom: 0.375rem; color: #ccc; font-size: 0.9rem; font-weight: 500;">E-Mail *</label>
+              <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.375rem; color: var(--text); font-family: inherit; font-size: 1rem;" />
+            </div>
+            <div>
+              <label for="company" style="display: block; margin-bottom: 0.375rem; color: #ccc; font-size: 0.9rem; font-weight: 500;">Unternehmen</label>
+              <input type="text" id="company" name="company" style="width: 100%; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.375rem; color: var(--text); font-family: inherit; font-size: 1rem;" />
+            </div>
+            <div>
+              <label for="message" style="display: block; margin-bottom: 0.375rem; color: #ccc; font-size: 0.9rem; font-weight: 500;">Nachricht *</label>
+              <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.375rem; color: var(--text); font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+            </div>
+            <p style="font-size: 0.8rem; color: #666;">
+              Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten einverstanden. 
+              <a href="/datenschutz" style="color: var(--brand);">Datenschutzerklärung</a>
+            </p>
+            <button type="submit" class="btn" style="align-self: flex-start;">Nachricht senden</button>
+          </form>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #666;">
+            <!-- TODO: Cyrus prüfen — Formular-Backend einrichten (z.B. Cloudflare Pages Functions, Formspree) -->
+            * Das Formular ist noch nicht aktiv. Bitte nutzen Sie bis dahin die E-Mail-Adresse unten.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="color: var(--brand); margin-bottom: 1rem;">Anschrift</h4>
+            <p style="color: #bbb;">
+              {SITE.name}<br />
+              {SITE.address.street}<br />
+              {SITE.address.city}
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h4 style="color: var(--brand); margin-bottom: 1rem;">Kontaktdaten</h4>
+            <p style="color: #bbb;">
+              E-Mail: <a href={`mailto:${SITE.email}`} style="color: var(--text);">{SITE.email}</a><br />
+              Telefon: {SITE.phone}
+            </p>
+          </div>
+
+          <div class="card">
+            <h4 style="color: var(--brand); margin-bottom: 1rem;">Handelsregister</h4>
+            <p style="color: #bbb; font-size: 0.9rem;">
+              {SITE.registry.court}<br />
+              {SITE.registry.number}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

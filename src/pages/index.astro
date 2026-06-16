@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE, BRAND } from '../site.config.ts';
+---
+
+<Layout title="Willkommen" description={SITE.tagline}>
+  <!-- Hero Section -->
+  <section class="section" style="min-height: 85vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+    <!-- Subtle background gradient -->
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(200,130,42,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+    
+    <div class="container" style="position: relative; text-align: center; max-width: 800px;">
+      <h1>
+        KI-gestützte Automatisierung<br />
+        <span style="color: var(--brand);">für Ihren Unternehmenserfolg</span>
+      </h1>
+      <p style="font-size: 1.2rem; color: #bbb; margin-top: 1.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+        Wir entwickeln praktische KI-Lösungen, die sofort funktionieren und spürbar entlasten. 
+        Keine Laber-Projekte — nur Ergebnisse die sich rechnen.
+      </p>
+      <div class="flex items-center justify-center gap-4" style="margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="/leistungen" class="btn btn">Unsere Leistungen</a>
+        <a href="/kontakt" class="btn btn-outline">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Propositions -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="text-center mb-8">Was uns auszeichnet</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="font-size: 2.5rem; color: var(--brand); margin-bottom: 1rem;">⚡</div>
+          <h3>Sofort funktionsfähig</h3>
+          <p style="color: #999;">
+            <!-- TODO: Cyrus prüfen -->
+            Keine monatelangen Implementierungsprojekte. Unsere Lösungen sind in Wochen statt Monaten produktiv.
+          </p>
+        </div>
+        <div class="card">
+          <div style="font-size: 2.5rem; color: var(--brand); margin-bottom: 1rem;">🔒</div>
+          <h3>DSGVO-konform</h3>
+          <p style="color: #999;">
+            <!-- TODO: Cyrus prüfen -->
+            Deutsche Server, keine US-Cloud-Abhängigkeit. Ihre Daten bleiben unter Ihrer Kontrolle.
+          </p>
+        </div>
+        <div class="card">
+          <div style="font-size: 2.5rem; color: var(--brand); margin-bottom: 1rem;">🎯</div>
+          <h3>Massgeschneidert</h3>
+          <p style="color: #999;">
+            <!-- TODO: Cyrus prüfen -->
+            Jedes Unternehmen ist anders. Wir analysieren Ihre Prozesse und bauen genau das was Sie brauchen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container" style="text-align: center; max-width: 700px;">
+      <h2>Bereit für den nächsten Schritt?</h2>
+      <p style="color: #bbb; margin-top: 1rem;">
+        Vereinbaren Sie ein unverbindliches Gespräch — wir zeigen Ihnen in 30 Minuten, 
+        wo bei Ihnen das grösste Automatisierungspotential liegt.
+      </p>
+      <a href="/kontakt" class="btn" style="margin-top: 2rem;">Jetzt Termin vereinbaren</a>
+    </div>
+  </section>
+</Layout>
